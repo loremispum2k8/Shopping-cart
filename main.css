@@ -4,3 +4,188 @@
     box-sizing: border-box;
     font-family: "Roboto";
 }
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 100px;
+    height: 106px;
+    width: 100%;
+    border-bottom: 2px solid #DDDDDD;
+    position: relative;
+}
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 364px;
+}
+.logo-container img{
+    width: 94px;
+}.logo-container p{
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.inner-menu{
+    display: flex;
+    flex-direction: row;
+    gap:44px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.inner-menu p{
+    cursor: pointer;
+}
+.inner-menu p:hover{
+    text-decoration: underline 2px solid;
+    text-underline-offset: 6px;
+}
+
+.menu-right-side{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+#search-bar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    cursor: text;
+    transition: background-color 0.2s;
+}
+#search-bar-container svg{
+    width: 38px;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    transition: background-color 0.2s;
+}
+#search-bar-container svg:hover{
+    background-color: rgb(196, 196, 196);
+}
+#search-bar-container:hover{
+    background-color: rgb(224, 224, 224);
+}
+#user, #basket{
+    position: relative;
+    cursor: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#user svg{
+    width: 34px;
+    height: 32px;
+    z-index: 10;
+    cursor: pointer;
+}
+#basket svg{
+    width: 32px;
+    height: 32px;
+    z-index: 10;
+    cursor: pointer;
+}
+#basket a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.track-counter{
+    z-index: 10;
+    position: absolute;
+    font-weight: 600;
+    background-color: #D71818;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+    right: 0;
+    top: 0;
+    margin-right: -18px;
+    margin-top: -8px;
+    transition: background-color 0.1s;
+}
+
+.icon-explanation-container{
+    background-color: rgb(196, 196, 196);
+    color: black;
+    margin-top: 130px;
+    margin-left: -30px;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 80px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.icon-circle{
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    position: absolute;
+    z-index: 1;
+    transition: opacity 0.1s;
+    display: none;
+}
+
+.icon-container:hover .track-counter{
+    background-color: black;
+}
+.icon-container:hover .icon-circle{
+    animation-name: icon-circle;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    display: inline;
+}
+.icon-container:hover .icon-explanation-container{
+    animation-name: icon-text;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    display: flex;
+    opacity: 1;
+}
+
+@keyframes icon-text{
+    25% {margin-top: 130px;}
+    50% {margin-top: 134px;}
+    75% {margin-top: 138px;}
+    100% {margin-top: 142px;}
+}
+@keyframes icon-circle{
+    25% {height: 10px; width: 10px;}
+    50% {height: 20px; width: 20px;}
+    75% {height: 40px; width: 40px;}
+    100% {height: 60px; width: 60px;}
+}
