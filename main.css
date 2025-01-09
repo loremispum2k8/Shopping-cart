@@ -7,7 +7,6 @@
 body{
     display: flex;
     flex-direction: column;
-    width: 100vw;
 }
 
 .header{
@@ -21,6 +20,7 @@ body{
     width: 100%;
     border-bottom: 2px solid #DDDDDD;
     position: relative;
+    z-index: 100;
 }
 .logo-container{
     display: flex;
@@ -191,4 +191,81 @@ body{
     50% {height: 20px; width: 20px;}
     75% {height: 40px; width: 40px;}
     100% {height: 60px; width: 60px;}
+}
+
+
+.hero-section{
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 1020px;
+    width: 100%;
+}
+.hero-Zindex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    margin-top: 100px;
+}
+.hero-img{
+    width: 1200px;
+}
+.backround-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    filter:contrast(0.2) brightness(175%) opacity(0.25);
+    z-index: 1;
+}
+.hero-total-text{
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    justify-content: space-between;
+}
+.hero-title{
+    color: #454545;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: -2%;
+    line-height: 130%;
+}
+.hero-title span{
+    color: black;
+}
+.hero-textbtn{
+    display:flex;
+    flex-direction:column;
+    color: #454545;
+    gap: 20px;
+}
+.hero-textbtn span{
+    color: black;
+}
+.hero-textbtn p{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+.hero-textbtn button{
+    background-color: black;
+    border:none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    height: 60px;
+    width: 150px;
+    cursor: pointer;
+    transition: background-color 0.1s, color 0.1s;
+}
+.hero-textbtn button:hover{
+    background-color: rgb(196, 196, 196);
+    color: black;
 }
