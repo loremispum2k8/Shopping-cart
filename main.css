@@ -371,3 +371,90 @@ body{
     font-size: 16px;
     font-weight: 500;
 }
+
+.subscribe-section{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.subscribe-inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    z-index: 10;
+}
+.subscribe-section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    filter:contrast(0.2) brightness(175%) opacity(0.25);
+    transform:rotateX(180deg);
+    z-index: 1;
+}
+.subscribe-inner-container h1{
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 130%;
+    letter-spacing: -2%;
+}
+.subscribe-description{
+    color: #454545;
+    line-height: 150%;
+    font-size: 18px;
+    font-weight: 500;
+}
+.subscribe-description span{
+    color: black;
+}
+.subscribe-input{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    position: relative;
+}
+.subscribe-input input:focus{
+    outline: none;
+}
+.subscribe-input input{
+    border: 2px solid hsl(0, 0%, 72%);
+    background-color: white;
+    outline: none;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    width: 450px;
+    border-radius: 6px;
+    padding-left: 20px;
+    padding-right: 170px;
+}
+.subscribe-input input::placeholder{
+    color: hsl(0, 0%, 72%);
+}
+.subscribe-input button{
+    width: 150px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 60px;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.1s, color 0.1s;
+}
+.subscribe-input button:hover{
+    background-color: hsl(0, 0%, 72%);
+    color:black;
+}
