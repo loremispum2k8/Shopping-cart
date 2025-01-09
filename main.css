@@ -307,6 +307,7 @@ body{
     z-index: 10;
     overflow: hidden;
     cursor: pointer;
+    border: 2px solid rgb(219, 219, 219);
 }
 #item-image{
     width: 274px;
