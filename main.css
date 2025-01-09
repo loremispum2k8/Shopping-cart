@@ -7,6 +7,7 @@
 body{
     display: flex;
     flex-direction: column;
+    height: 10000px;
 }
 
 .header{
@@ -268,4 +269,104 @@ body{
 .hero-textbtn button:hover{
     background-color: rgb(196, 196, 196);
     color: black;
+}
+
+
+
+.full-row{
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.row-title{
+    font-size: 38px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    padding: 0px 100px;
+}
+.row-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0px 100px;
+    justify-content: space-between;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.img-container{
+    width: 274px;
+    height: 432px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+}
+#item-image{
+    width: 274px;
+    height: 432px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.2s, filter 0.2s;
+}
+.img-container:hover #item-image{
+    transform: scale(1.05);
+    filter: saturate(150%);
+}
+.item-text{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+#item-title{
+    font-size: 20px;
+    color: #454545;
+    font-weight: 600;
+    cursor: pointer;
+}
+.item-pricebutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#price{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 9%;
+}
+#item-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0px 16px 0px 6px;
+    width: 180px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.1s;
+}
+#item-btn:hover{
+    transform: scale(1.03);
+    background-color: #f1f1f1;
+}
+#item-btn:active{
+    color: white;
+    background-color: black;
+}
+#item-btn svg{
+    width: 28px;
+}
+#item-btn p{
+    font-size: 16px;
+    font-weight: 500;
 }
