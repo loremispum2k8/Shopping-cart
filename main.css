@@ -7,7 +7,6 @@
 body{
     display: flex;
     flex-direction: column;
-    height: 10000px;
 }
 
 .header{
@@ -457,4 +456,48 @@ body{
 .subscribe-input button:hover{
     background-color: hsl(0, 0%, 72%);
     color:black;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 140px;
+    height: 106px;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+.logo-container-white{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 180px;
+    cursor: pointer;
+}
+.logo-container-white img{
+    width: 94px;
+    filter: invert(1);
+}
+.logo-container-white p{
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    font-weight: 500;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+.socials svg{
+    cursor: pointer;
 }
