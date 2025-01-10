@@ -9,6 +9,125 @@ body{
     flex-direction: column;
 }
 
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------------------------------------------------------ */
+/*Will set position as flex*/
+.total-SEARCH-POPUP{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+.SEARCH-POPUP-SHADE{
+    height: 100%;
+    background-color: hsla(0, 0%, 54%, 0.6);
+    backdrop-filter: blur(3px);
+}
+.SEARCH-POPUP{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 140px;
+    height: 106px;
+    width: 100%;
+    border-bottom: 2px solid #DDDDDD;
+}
+#Cancel{
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    padding-left: 309px;
+}
+#search-bar-container-POPUP{
+    position: relative;
+}
+#search-bar-container-POPUP input{
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    transition: background-color 0.2s;
+    height: 40px;
+    width: 800px;
+    transition: background-color 0.2s;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px 60px;
+}
+#search-bar-container-POPUP svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 40px;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    transition: background-color 0.2s;
+}
+#search-bar-container-POPUP svg:hover{
+    background-color: rgb(196, 196, 196);
+}
+#search-bar-container-POPUP:hover input{
+    background-color: rgb(224, 224, 224);
+}
+.search-tracker{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-tracker-row{
+    padding: 60px 0px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.search-tracker-row p{
+    cursor: pointer;
+    font-size:18px;
+    font-weight:500;
+}
+.search-tracker-row p:hover{
+    text-decoration: underline 2px solid;
+    text-underline-offset: 6px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header{
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -19,7 +138,7 @@ body{
     height: 106px;
     width: 100%;
     border-bottom: 2px solid #DDDDDD;
-    position: relative;
+    position: fixed;
     z-index: 100;
 }
 .logo-container{
@@ -202,6 +321,7 @@ body{
     flex-direction: column;
     height: 1020px;
     width: 100%;
+    margin-top: 106px;
 }
 .hero-Zindex{
     display: flex;
