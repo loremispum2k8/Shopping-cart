@@ -230,11 +230,11 @@
     <div class="ADD-CONFIRMATION">
         <div class="confirmation-container">
             <div class="confirmation-first-row">
-                <div class="confirmation checkmark-section">
+                <div class="confirmation-checkmark-section">
                     <div class="checkmark-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="none"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect fill="none"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M416 128L192 384l-96-96"/></svg>
                     </div>
-                    <p class="checkmark-added-text"></p>
+                    <p class="checkmark-added-text">Added to the bag</p>
                 </div>
                 <div id="exit-container">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12.75 7a.75.75 0 0 0-1.5 0v4.25H7a.75.75 0 0 0 0 1.5h4.25V17a.75.75 0 0 0 1.5 0v-4.25H17a.75.75 0 0 0 0-1.5h-4.25z"/></svg>
@@ -249,8 +249,10 @@
                         <h2>$249.99</h2>
                     </div>
                     <div class="confirmation-buttons">
-                        <button class="view-bag-button">View bag(1)</button>
-                        <button class="checkout-button">Checkout</button>
+                        <button class="view-bag-button">View bag (<span class="popup-tracker">1</span>)</button>
+                        <a href="cart/cart.html">
+                            <button class="checkout-button">Checkout</button>
+                        </a>
                     </div>
                 </div>
             </div>

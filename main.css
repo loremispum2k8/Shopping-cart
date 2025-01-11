@@ -121,6 +121,162 @@ body{
 
 
 
+/*------------------------------------------------------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------------------------------------------------------ */
+.ADD-CONFIRMATION{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    margin-top: 106px;
+}
+.ADD-CONFIRMATION-SHADE{
+    height: 100%;
+    background-color: hsla(0, 0%, 54%, 0.6);
+    backdrop-filter: blur(3px);
+}
+.confirmation-container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    border-radius: 0px 0px 6px 6px;
+    margin-right: 142px;
+    padding: 30px;
+    width: 460px;
+    gap: 30px;
+    margin-top: 100px;
+    position: fixed;
+}
+.confirmation-container svg{
+    width: 20px;
+}
+.confirmation-container img{
+    width: 120px;
+    height: 182px;
+    border-radius: 6px;
+}
+.confirmation-first-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.confirmation-checkmark-section{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.checkmark-container{
+    background-color: #007D48;
+    height: 26px;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.checkmark-container svg{
+    color: white;
+    width: 18px;
+}
+.checkmark-added-text{
+    font-weight: 500;
+    font-size: 18px;
+}
+#exit-container svg{
+    width: 30px;
+    rotate: 45deg;
+}
+#exit-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ECECEC;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+}
+#exit-container:hover{
+    background-color: black;
+    color: white;
+}
+.confirmation-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+.confirmation-right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 280px;
+    gap: 14px;
+}
+.confirmation-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.confirmation-title h1{
+    font-size: 18px;
+    font-weight: 500;
+}
+.confirmation-title p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.confirmation-title h2{
+    font-size: 18px;
+    font-weight: 500;
+}
+.confirmation-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+.confirmation-buttons a{
+    width: 100%;
+}
+.confirmation-buttons button{
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.view-bag-button{
+    background-color: white;
+    border: 1px solid hsla(0, 0%, 27%, 0.6);
+    transition: background-color 0.1s;
+}
+.view-bag-button:hover{
+    background-color: hsl(0, 0%, 88%);
+}
+.checkout-button{
+    background-color: black;
+    color: white;
+    border:none;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+
 
 
 
@@ -139,7 +295,7 @@ body{
     width: 100%;
     border-bottom: 2px solid #DDDDDD;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
 }
 .logo-container{
     display: flex;
