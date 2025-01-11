@@ -12,7 +12,94 @@
     <script src="https://kit.fontawesome.com/d427841ab5.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="images/Logo_NIKE.svg.png" alt="Nike logo">
+            <p class="logo-text">NIKE<b>TIMING</b></p>
+        </div>
+        <div class="inner-menu">
+            <p>Home</p>
+            <p>About Nike</p>
+            <p>Contact us</p>
+            <p>Support</p>
+        </div>
+        <div class="menu-right-side">
+            <div id="user" class="icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="3"/><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M17.97 20c-.16-2.892-1.045-5-5.97-5s-5.81 2.108-5.97 5"/></g></svg>
+                <div class="icon-explanation-container">
+                    <p>Account</p>
+                </div>
+                <div class="icon-circle"></div>
+            </div>
+            <div id="basket" class="icon-container">
+                <a href="cart/cart.html"></a>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="currentColor" d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg>
+                <div class="icon-explanation-container">
+                    <p>Basket</p>
+                </div>
+                <div class="icon-circle"></div>
+                <div class="track-counter"><p>1</p></div>
+            </div>
+        </div>
+    </div>
     
-    
+    <h1 class="bag-title">Your basket</h1>
+
+    <div class="bag-section-body">
+        <div class="left-side-list">
+            <div class="bag-item">
+                <img class="checkout-img" src="images/image1.png" alt="watch image">
+                <div class="item-right-side">
+                    <div class="right-side-upper-row">
+                        <h1>WC0008-001 Green</h1>
+                        <p>$249.99</p>
+                    </div>
+                    <div class="quantity-tracker">
+                        <div id="delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16m-10 4v6m4-6v6M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></svg></div>
+                        <div id="remove" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" d="M18 12.998H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2"/></svg></div>
+                        <p id="quantity-number">1</p>
+                        <div id="add"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><path fill="currentColor" d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"/></svg></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-summary">
+            <h1 class="summary-title">Summary</h1>
+            <div class="summary-body">
+                <div class="group">
+                    <h2 class="question">Do you have a Promo Code?</h2>
+                <div class="input-container">
+                    <input type="text">
+                    <div class="summary-btn"><p>Apply</p></div>
+                </div>
+                </div>
+               <div class="group">
+                <div class="row-container">
+                    <h2>Subtotal</h2>
+                    <p class="subtotal">$609.97</p>
+                </div>
+                <div class="row-container">
+                    <h2>Estimated Delivery & Handling</h2>
+                    <p class="subtotal">Free</p>
+                </div>
+               </div>
+                <div class="total-container">
+                    <div class="row-container">
+                        <h2>Total</h2>
+                        <p class="total">$609.97</p>
+                    </div>
+                </div>
+                <div class="group">
+                    <button>Checkout</button>
+                    <div class="paypal-btn"><img src="images/PayPal.png" alt="paypal logo"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
 </body>
 </html>
