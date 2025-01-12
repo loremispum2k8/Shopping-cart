@@ -8,8 +8,13 @@ body{
     display: flex;
     flex-direction: column;
 }
-
-
+.hidden{
+    opacity:0;
+    transition: opacity 0.2s;
+}
+.show{
+    opacity: 1;
+}
 
 
 
