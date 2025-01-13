@@ -8,6 +8,10 @@ body{
     display: flex;
     flex-direction: column;
 }
+a{
+    text-decoration: none;
+    color: initial;
+}
 .hidden{
     opacity:0;
     filter: blur(5px);
@@ -123,12 +127,12 @@ body{
     gap: 60px;
     flex-wrap: wrap;
 }
-.search-tracker-row p{
+.search-tracker-row a{
     cursor: pointer;
     font-size:18px;
     font-weight:500;
 }
-.search-tracker-row p:hover{
+.search-tracker-row a:hover{
     text-decoration: underline 2px solid;
     text-underline-offset: 6px;
 }
