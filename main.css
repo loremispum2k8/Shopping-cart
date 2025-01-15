@@ -153,14 +153,14 @@ a{
     display: none;
     height: 100%;
     width: 100%;
-    position: absolute;
-    z-index: 999;
+    position: fixed;
     top: 0;
     left: 0;
     margin-top: 106px;
 }
 .ADD-CONFIRMATION-SHADE{
     height: 100%;
+    width: 100%;
     background-color: hsla(0, 0%, 54%, 0.6);
     backdrop-filter: blur(3px);
 }
@@ -295,6 +295,20 @@ a{
     background-color: black;
     color: white;
     border:none;
+}
+
+
+@keyframes search{
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.50;}
+    100% {opacity:1;}
+}
+.searchAnimation{
+    display:flex;
+    animation-name: search;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
 }
 /*------------------------------------------------------------------------------------------------------------------------------------------ */
 /*------------------------------------------------------------------------------------------------------------------------------------------ */
