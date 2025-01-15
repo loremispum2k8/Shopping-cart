@@ -75,7 +75,7 @@ function removeBagPP(){
     popUpBag.classList.remove('searchAnimation');
     document.body.style.overflowY = 'scroll';
 }
-addBtn.forEach(btn => btn.addEventListener('click', ()=>{
+addBtn.forEach(btn => btn.addEventListener('mousedown', ()=>{
     popUpBag.classList.add('searchAnimation');
     document.body.style.overflow = 'hidden';
 
@@ -83,6 +83,10 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     
 }))
 exitBagPU.addEventListener('click', removeBagPP)
+
+addBtn.forEach(btn => btn.addEventListener('click', ()=>{
+    console.log(btn.parentElement.previousElementSibling.textContent)    
+}))
 
 
 
