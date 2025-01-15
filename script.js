@@ -79,7 +79,7 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     popUpBag.classList.add('searchAnimation');
     document.body.style.overflow = 'hidden';
 
-    timeout = setTimeout(removeBagPP, 10000)
+    timeout = setTimeout(removeBagPP, 7000)
     
 }))
 exitBagPU.addEventListener('click', ()=>{
