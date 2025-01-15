@@ -70,19 +70,22 @@ inputSearch.addEventListener('input', (e)=>{
 const exitBagPU = document.getElementById('exit-container')
 const popUpBag = document.querySelector('.ADD-CONFIRMATION')
 const addBtn = document.querySelectorAll('.addBtn');
-let timeout;
 function removeBagPP(){
     popUpBag.classList.remove('searchAnimation');
     document.body.style.overflowY = 'scroll';
 }
 addBtn.forEach(btn => btn.addEventListener('mousedown', ()=>{
+    let timeout;
     popUpBag.classList.add('searchAnimation');
     document.body.style.overflow = 'hidden';
 
-    timeout = setTimeout(removeBagPP, 5000)
+    timeout = setTimeout(removeBagPP, 10000)
     
 }))
-exitBagPU.addEventListener('click', removeBagPP)
+exitBagPU.addEventListener('click', ()=>{
+    removeBagPP();
+    clearTimeout(timeout)
+})
 
 addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     console.log(btn.parentElement.previousElementSibling.textContent)    
