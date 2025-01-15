@@ -45,8 +45,6 @@ inputSearch.addEventListener('input', (e)=>{
         finalReferenceGroup.push(finalReferenceArrays)
     })
 
-    console.log(finalReferenceGroup)
-    console.log(usableInputValue)
 
     finalReferenceGroup.forEach((item) => {
         if(item.join('') === usableInputValue.join('')){
@@ -66,7 +64,23 @@ inputSearch.addEventListener('input', (e)=>{
 })
 
 
+
+let totalPrice = 0;
+let numberOfItems = 0;
+let timeout;
+
+
 //     POPUP BAG     //
+const name = document.querySelector('.popupName')
+const price = document.querySelector('.popupPrice')
+const image = document.querySelector('.confirmation-image')
+const btnTracker = document.querySelector('.popup-tracker')
+const bagCounter = document.querySelector('.counter-text')
+
+if(numberOfItems === 0){
+    bagCounter.parentElement.style.display = 'none'
+}
+
 const exitBagPU = document.getElementById('exit-container')
 const popUpBag = document.querySelector('.ADD-CONFIRMATION')
 const addBtn = document.querySelectorAll('.addBtn');
@@ -75,23 +89,33 @@ function removeBagPP(){
     document.body.style.overflowY = 'scroll';
 }
 addBtn.forEach(btn => btn.addEventListener('click', ()=>{
-    let timeout;
+    price.textContent = btn.parentElement.previousElementSibling.textContent;
+    name.textContent = btn.parentElement.parentElement.previousElementSibling.textContent;
+    image.src = btn.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.src;
     popUpBag.classList.add('searchAnimation');
     document.body.style.overflow = 'hidden';
 
     timeout = setTimeout(removeBagPP, 7000)
+
+
+    let extractprice = btn.parentElement.previousElementSibling.textContent.split('');
+    extractprice.splice(0,1).join('')
+    let usablePrice = Number(extractprice.join(''))
+    
+    
+    totalPrice += usablePrice;
+    numberOfItems++;
+
+    btnTracker.textContent = numberOfItems;
+    bagCounter.textContent = numberOfItems;
+
+    bagCounter.parentElement.style.display = 'flex'
     
 }))
 exitBagPU.addEventListener('click', ()=>{
     removeBagPP();
     clearTimeout(timeout)
 })
-
-addBtn.forEach(btn => btn.addEventListener('click', ()=>{
-    console.log(btn.parentElement.previousElementSibling.textContent)    
-}))
-
-
 
 
 
