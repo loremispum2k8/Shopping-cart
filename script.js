@@ -1,6 +1,7 @@
 
 
-//      SEARCH BAR     //
+try {
+    //      SEARCH BAR     //
 
 const searchBar = document.getElementById('search-bar-container');
 const searchBarPopUp = document.querySelector('.total-SEARCH-POPUP');
@@ -22,8 +23,6 @@ let itemTitles = [];
 for(let i = 0; i<itemNames.length; i++){
     itemTitles.push(itemNames[i].textContent.toLowerCase().split(''))
 }
-
-
 
 
 inputSearch.addEventListener('input', (e)=>{
@@ -71,7 +70,11 @@ let totalPrice = 0;
 let numberOfItems = 0;
 let timeout;
 
-numberOfItems = localStorage.getItem('localTrack')
+//STORAGE WORK
+let mainArr = []
+//STORAGE WORK
+
+numberOfItems = localStorage.getItem('localTrack');
 
 
 //     POPUP BAG     //
@@ -79,7 +82,8 @@ const name = document.querySelector('.popupName')
 const price = document.querySelector('.popupPrice')
 const image = document.querySelector('.confirmation-image')
 const btnTracker = document.querySelector('.popup-tracker')
-const bagCounter = document.querySelector('.counter-text')
+const bagCounter = document.querySelector('.counter-text');
+const circle = document.querySelector('.track-counter')
 
 btnTracker.textContent = localStorage.getItem('localTrack');
 bagCounter.textContent = localStorage.getItem('localTrack')
@@ -87,6 +91,10 @@ bagCounter.textContent = localStorage.getItem('localTrack')
 const exitBagPU = document.getElementById('exit-container')
 const popUpBag = document.querySelector('.ADD-CONFIRMATION')
 const addBtn = document.querySelectorAll('.addBtn');
+
+if(bagCounter.textContent === ''){
+    circle.style.display = 'none'
+}
 function removeBagPP(){
     popUpBag.classList.remove('searchAnimation');
     document.body.style.overflowY = 'scroll';
@@ -118,14 +126,30 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     bagCounter.textContent = localStorage.getItem('localTrack');
 
     bagCounter.parentElement.style.display = 'flex'
+
+
+    let itemObj = {
+        name: '',
+        price: 0,
+        imageUrl: '',
+    };
+    itemObj.name = btn.parentElement.parentElement.previousElementSibling.textContent;
+    itemObj.price = btn.parentElement.previousElementSibling.textContent;
+    itemObj.imageUrl = btn.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.src;
+
+
+    
+    mainArr.push(itemObj);
+    localStorage.setItem('ARR', JSON.stringify(mainArr))
+    console.log(JSON.parse(localStorage.getItem('ARR')))
 }))
 exitBagPU.addEventListener('click', ()=>{
     removeBagPP();
     clearTimeout(timeout)
 })
+//localStorage.clear()
 
-
-
+//     CAUTION >>>>>  WORK WITH THE LOCAL ARRAY TO SEE WHAT TO DO WITH THE STORED INFO
 
 
 //     FADE ANIMATION      //
@@ -137,6 +161,18 @@ const observer = new IntersectionObserver((entries)=>{
         }
     })
 })
-
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el)=>observer.observe(el))
+
+
+
+
+
+} catch (error) {
+    console.log('<< ERROR HAS BEEN FOUND >>>')
+    console.log(error)
+} finally {
+    // Code that should run regardless of whether there was an error
+    
+}
+
