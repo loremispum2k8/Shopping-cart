@@ -71,6 +71,8 @@ let timeout;
 
 
 //     POPUP BAG     //
+bagCounter.textContent = localStorage.getItem('bagTrackerStorager');
+
 const name = document.querySelector('.popupName')
 const price = document.querySelector('.popupPrice')
 const image = document.querySelector('.confirmation-image')
@@ -105,9 +107,10 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     
     totalPrice += usablePrice;
     numberOfItems++;
+    localStorage.setItem('bagTrackerStorager', numberOfItems)
 
     btnTracker.textContent = numberOfItems;
-    bagCounter.textContent = numberOfItems;
+    bagCounter.textContent = localStorage.getItem('bagTrackerStorager');
 
     bagCounter.parentElement.style.display = 'flex'
     
@@ -116,9 +119,6 @@ exitBagPU.addEventListener('click', ()=>{
     removeBagPP();
     clearTimeout(timeout)
 })
-
-
-
 
 
 
