@@ -1,3 +1,5 @@
+
+
 //      SEARCH BAR     //
 
 const searchBar = document.getElementById('search-bar-container');
@@ -69,19 +71,18 @@ let totalPrice = 0;
 let numberOfItems = 0;
 let timeout;
 
+numberOfItems = localStorage.getItem('localTrack')
+
 
 //     POPUP BAG     //
-bagCounter.textContent = localStorage.getItem('bagTrackerStorager');
-
 const name = document.querySelector('.popupName')
 const price = document.querySelector('.popupPrice')
 const image = document.querySelector('.confirmation-image')
 const btnTracker = document.querySelector('.popup-tracker')
 const bagCounter = document.querySelector('.counter-text')
 
-if(numberOfItems === 0){
-    bagCounter.parentElement.style.display = 'none'
-}
+btnTracker.textContent = localStorage.getItem('localTrack');
+bagCounter.textContent = localStorage.getItem('localTrack')
 
 const exitBagPU = document.getElementById('exit-container')
 const popUpBag = document.querySelector('.ADD-CONFIRMATION')
@@ -103,22 +104,27 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     let extractprice = btn.parentElement.previousElementSibling.textContent.split('');
     extractprice.splice(0,1).join('')
     let usablePrice = Number(extractprice.join(''))
+
+    bagCounter.textContent = localStorage.getItem('localTrack');
     
     
     totalPrice += usablePrice;
     numberOfItems++;
-    localStorage.setItem('bagTrackerStorager', numberOfItems)
 
-    btnTracker.textContent = numberOfItems;
-    bagCounter.textContent = localStorage.getItem('bagTrackerStorager');
+    localStorage.setItem('localTrack', numberOfItems);
+    
+
+    btnTracker.textContent = localStorage.getItem('localTrack');
+    bagCounter.textContent = localStorage.getItem('localTrack');
 
     bagCounter.parentElement.style.display = 'flex'
-    
 }))
 exitBagPU.addEventListener('click', ()=>{
     removeBagPP();
     clearTimeout(timeout)
 })
+
+
 
 
 
