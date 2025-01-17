@@ -1,8 +1,7 @@
 
 
-try {
-    //      SEARCH BAR     //
 
+//      SEARCH BAR     //
 const searchBar = document.getElementById('search-bar-container');
 const searchBarPopUp = document.querySelector('.total-SEARCH-POPUP');
 const cancelBtn = document.getElementById('Cancel')
@@ -92,6 +91,9 @@ const exitBagPU = document.getElementById('exit-container')
 const popUpBag = document.querySelector('.ADD-CONFIRMATION')
 const addBtn = document.querySelectorAll('.addBtn');
 
+
+const list = document.querySelector('.left-side-list');
+
 if(bagCounter.textContent === ''){
     circle.style.display = 'none'
 }
@@ -142,37 +144,17 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     mainArr.push(itemObj);
     localStorage.setItem('ARR', JSON.stringify(mainArr))
     console.log(JSON.parse(localStorage.getItem('ARR')))
+
+
+
+
 }))
 exitBagPU.addEventListener('click', ()=>{
     removeBagPP();
     clearTimeout(timeout)
 })
+
 //localStorage.clear()
 
-//     CAUTION >>>>>  WORK WITH THE LOCAL ARRAY TO SEE WHAT TO DO WITH THE STORED INFO
-
-
-//     FADE ANIMATION      //
-
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('show')
-        }
-    })
-})
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el)=>observer.observe(el))
-
-
-
-
-
-} catch (error) {
-    console.log('<< ERROR HAS BEEN FOUND >>>')
-    console.log(error)
-} finally {
-    // Code that should run regardless of whether there was an error
-    
-}
-
+console.log(list)
+console.log(list.innerHTML)
