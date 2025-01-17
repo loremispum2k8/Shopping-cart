@@ -1,6 +1,9 @@
 
 
 
+
+
+
 //      SEARCH BAR     //
 const searchBar = document.getElementById('search-bar-container');
 const searchBarPopUp = document.querySelector('.total-SEARCH-POPUP');
@@ -92,8 +95,6 @@ const popUpBag = document.querySelector('.ADD-CONFIRMATION')
 const addBtn = document.querySelectorAll('.addBtn');
 
 
-const list = document.querySelector('.left-side-list');
-
 if(bagCounter.textContent === ''){
     circle.style.display = 'none'
 }
@@ -101,6 +102,10 @@ function removeBagPP(){
     popUpBag.classList.remove('searchAnimation');
     document.body.style.overflowY = 'scroll';
 }
+
+
+
+
 addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     price.textContent = btn.parentElement.previousElementSibling.textContent;
     name.textContent = btn.parentElement.parentElement.previousElementSibling.textContent;
@@ -146,6 +151,22 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     console.log(JSON.parse(localStorage.getItem('ARR')))
 
 
+        
+    
+    ///WORK HERE///
+
+
+
+    let div = document.createElement('div');
+    div.textContent = 'TEST';
+    storageList.appendChild(div)
+    localStorage.setItem('List', JSON.stringify(storageList.innerHTML));
+    list.innerHTML = JSON.parse(localStorage.getItem('List'));
+
+
+
+
+    ///WORK HERE///
 
 
 }))
@@ -155,6 +176,3 @@ exitBagPU.addEventListener('click', ()=>{
 })
 
 //localStorage.clear()
-
-console.log(list)
-console.log(list.innerHTML)
