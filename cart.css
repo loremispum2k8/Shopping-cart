@@ -178,6 +178,7 @@ body{
     margin-top: 40px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 60px;
     padding: 0px 140px;   
 }

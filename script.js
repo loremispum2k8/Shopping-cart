@@ -104,6 +104,10 @@ function removeBagPP(){
 }
 
 
+const list = document.querySelector('.left-side-list');
+let storageList = list;
+
+
 
 
 addBtn.forEach(btn => btn.addEventListener('click', ()=>{
@@ -150,23 +154,12 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     localStorage.setItem('ARR', JSON.stringify(mainArr))
     console.log(JSON.parse(localStorage.getItem('ARR')))
 
-
-        
-    
-    ///WORK HERE///
-
-
-
     let div = document.createElement('div');
     div.textContent = 'TEST';
+
     storageList.appendChild(div)
     localStorage.setItem('List', JSON.stringify(storageList.innerHTML));
     list.innerHTML = JSON.parse(localStorage.getItem('List'));
-
-
-
-
-    ///WORK HERE///
 
 
 }))
