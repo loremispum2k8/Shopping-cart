@@ -104,9 +104,7 @@ function removeBagPP(){
 }
 
 
-const list = document.querySelector('.left-side-list');
-let storageList = list;
-
+const List = document.querySelector('.left-side-list');
 
 
 
@@ -155,11 +153,38 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     console.log(JSON.parse(localStorage.getItem('ARR')))
 
     let div = document.createElement('div');
-    div.textContent = 'TEST';
+    div.className = 'bag-item'
+    let img = document.createElement('img');
+    img.className = 'checkout-img';
+    img.src = btn.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.src;
+    div.appendChild(img);
+    let rightSide = document.createElement('div');
+    rightSide.className = 'item-right-side'
+    div.appendChild(rightSide);
+    let upperRow = document.createElement('div');
+    upperRow.className = 'right-side-upper-row'
+    rightSide.appendChild(upperRow)
+    let itemTitle = document.createElement('h1');
+    itemTitle.id = 'item-name';
+    itemTitle.textContent = btn.parentElement.parentElement.previousElementSibling.textContent;
+    upperRow.appendChild(itemTitle);
+    let itemPrice = document.createElement('p')
+    itemPrice.id = 'item.price'
+    itemPrice.textContent = btn.parentElement.previousElementSibling.textContent;
+    upperRow.appendChild(itemPrice);
 
-    storageList.appendChild(div)
-    localStorage.setItem('List', JSON.stringify(storageList.innerHTML));
-    list.innerHTML = JSON.parse(localStorage.getItem('List'));
+    //console.log(div)
+
+    List.appendChild(div)
+
+    //console.log(List)
+
+    localStorage.setItem('List', JSON.stringify(List.innerHTML));
+
+
+    console.log(JSON.parse(localStorage.getItem('List')));
+
+    localStorage.setItem('totalPrice', totalPrice);
 
 
 }))
