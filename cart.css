@@ -223,32 +223,24 @@ body{
     font-size: 20px;
     font-weight: 600;
 }
-.quantity-tracker{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 6px;
-    border: 1px solid #D3D3D3;
+.deletebtn{
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid black;
+    padding: 6px 20px;
+    background-color: white;
+    cursor: pointer;
     width: fit-content;
-}
-.quantity-tracker svg{
-    width: 20px;
-}
-.quantity-tracker div{
-    padding: 10px;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: background-color 0.1s;
-    cursor:pointer;
 }
-.quantity-tracker div:hover{
-    background-color: #D3D3D3;
+.deletebtn:hover{
+    background-color: red;
+    color: white;
+    border: 1px solid red;
 }
-#quantity-number{
-    padding: 0px 16px;
-}
-.hidden{
-    display: none;
-}
+
+
 
 .list-summary{
     display: flex;

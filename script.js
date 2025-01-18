@@ -171,13 +171,14 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     let itemPrice = document.createElement('p')
     itemPrice.id = 'item.price'
     itemPrice.textContent = btn.parentElement.previousElementSibling.textContent;
-    upperRow.appendChild(itemPrice);
-
-    //console.log(div)
+    let deletebtn = document.createElement('btn')
+    deletebtn.className = 'deletebtn'
+    deletebtn.textContent = 'Delete'
+    rightSide.appendChild(deletebtn)
 
     List.appendChild(div)
 
-    //console.log(List)
+    console.log(List)
 
     localStorage.setItem('List', JSON.stringify(List.innerHTML));
 
