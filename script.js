@@ -171,6 +171,7 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     let itemPrice = document.createElement('p')
     itemPrice.id = 'item.price'
     itemPrice.textContent = btn.parentElement.previousElementSibling.textContent;
+    upperRow.appendChild(itemPrice);
     let deletebtn = document.createElement('btn')
     deletebtn.className = 'deletebtn'
     deletebtn.textContent = 'Delete'
